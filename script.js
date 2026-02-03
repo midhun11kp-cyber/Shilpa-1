@@ -19,12 +19,6 @@ document.getElementById("yes").addEventListener("click", () => {
     "img7.jpeg"
   ];
 
-  // 🎵 Play music
-  const music = new Audio("apna-bana-le.mp3");
-  music.loop = true;
-  music.volume = 0.5;
-  music.play();
-
   let index = 0;
 
   document.body.innerHTML = `
@@ -68,8 +62,5 @@ document.getElementById("yes").addEventListener("click", () => {
       if (i === text.length) clearInterval(typing);
     }, 120);
   }
-});
-
-
 });
 
