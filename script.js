@@ -1,14 +1,27 @@
 const noBtn = document.getElementById("no");
+
 noBtn.addEventListener("mouseover", () => {
-const x = Math.random() * (window.innerWidth - 100);
-const y = Math.random() * (window.innerHeight - 50);
-noBtn.style.left = `${x}px`;
-noBtn.style.top = `${y}px`;
+  noBtn.style.position = "absolute";
+
+  const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+  const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
 });
+
 document.getElementById("yes").addEventListener("click", () => {
-document.body.innerHTML = `
-<div style="text-align:center;color:white;">
-<h1>🥰 Yayyy! She said YES! 💖</h1>
-<p>Happy Valentine’s Day 🌹</p>
-</div>`;
+  document.body.innerHTML = `
+    <div style="
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      color:white;
+      font-size:28px;">
+      <h1>🥰 Yayyy! She said YES! 💖</h1>
+      <p>Best Valentine ever 🌹</p>
+    </div>
+  `;
 });
