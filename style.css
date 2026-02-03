@@ -28,4 +28,4 @@ font-size: 16px;
 cursor: pointer;
 }
 #yes { background: #e91e63; color: white; }
-#no { background: #f1f1f1; position: absolute; }
+#no { background: #f1f1f1; position: relative; }
